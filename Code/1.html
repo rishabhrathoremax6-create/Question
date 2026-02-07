@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question for you</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        
+        #secondPage {
+            display: none;
+        }
+        #firstPage {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #secondPage {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nextButton = document.getElementById('nextButton');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            const firstPage = document.getElementById('firstPage');
+            const secondPage = document.getElementById('secondPage');
+
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    
+                    if (backgroundMusic) {
+                        backgroundMusic.play().catch(err => console.log("Music play failed:", err));
+                    }
+
+                    if (firstPage && secondPage) {
+                        firstPage.style.display = 'none';
+                        secondPage.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<script>
+    document.getElementById("yes").onclick = function() {
+        window.location.href = 'Romantic.html';
+    };
+</script>
+<body>
+
+    <div id="firstPage">
+        <h1>Can I ask you something?</h1>
+        <button id="nextButton">Next</button>
+    </div>
+
+    <div id="secondPage">
+        <h1>Will you be my Valentine? ❤️</h1>
+         <button id="yes">Yes</button>
+         <button id="no">No</button>
+        </div>
+        <script src="script.js"></script>
+
+    <audio id="backgroundMusic" src="be_happy.mp3" loop></audio>
+
+</body>
+<script>
+    document.getElementById("yes").onclick = function() {
+        window.location.href = 'Romantic.html';
+    };
+</script>
+</html>

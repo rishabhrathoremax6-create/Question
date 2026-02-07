@@ -1,0 +1,23 @@
+body {
+    background-image: url(Valentine.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+}
+#firstPage, #secondPage {
+            text-align: center;
+            padding-top: 20%;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+#nextButton, #yes, #no {
+    padding: 15px 30px; 
+        font-size: 1.2em; 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+
+}
